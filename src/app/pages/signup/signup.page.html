@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <h1 class="title">Bienvenido</h1>
+  </div>
+
+  <form [formGroup]="regForm" novalidate>
+    <div class="ion-padding">
+      <p class="subTitle">Registrate para crear una cuenta</p>
+      <ion-item>
+        <ion-input formControlName="fullname" class="input" placeholder="nombre"></ion-input>
+      </ion-item>
+     
+
+      <ion-item>
+        <ion-input formControlName="email" class="input" placeholder="email"></ion-input>
+      </ion-item>
+     
+
+      <ion-item>
+        <ion-input formControlName="password" class="input" placeholder="password"></ion-input>
+      </ion-item>
+     
+      <ion-button (click)="signUp()">
+        Registrarme
+      </ion-button>
+      <div>
+        <p>Ya tienes una cuenta?<a [routerLink]="['/login']">Acceder</a></p>
+      </div>
+    </div>
+  </form>
+</ion-content>
